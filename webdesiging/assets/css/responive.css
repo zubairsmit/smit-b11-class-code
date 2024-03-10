@@ -1,0 +1,26 @@
+@media (min-width: 550px) {
+    section ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    section li {
+        flex-basis: 49.5%;
+    }
+
+    /* turn off object position, inherit object-fit: cover */
+    figure img {
+        object-position: 0;
+    }
+}
+
+@media (min-width: 800px) {
+    section h2 {
+        margin-left: 100px;
+    }
+
+    section li {
+        flex-basis: 32.5%;
+    }
+}

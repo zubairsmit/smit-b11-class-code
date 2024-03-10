@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flexbox.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="font.css">
+</head>
+
+<body>
+    <!-- Row 1: One box per column -->
+    <a href="https://facebook.com" target="_blank">
+
+        <i class="fa-brands fa-facebook" style="font-size: 100px;"></i>
+    </a>
+    <div class="row">
+        <figure class="order-2">
+            <div class="one"></div>
+            <figcaption>
+                <h2>Abstract 1</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure class="order-3">
+            <div class="two"></div>
+
+            <figcaption>
+                <h2>Abstract 2</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure class="order-4 ">
+            <div class="three"></div>
+
+            <figcaption>
+                <h2>Abstract 3</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure class="order-1">
+            <div class="four"></div>
+
+            <figcaption>
+                <h2>Abstract 4</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+
+    </div>
+
+
+
+    <!-- Row 2: 2 boxes, each spanning 2 columns -->
+    <div class="row">
+        <figure class="span2">
+            <div class="three"></div>
+
+            <figcaption>
+                <h2>Abstract 3</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure class="span2">
+            <div class="one"></div>
+
+            <figcaption>
+                <h2>Abstract 1</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+    </div>
+
+
+    <!-- Row 3: One box spans 3 columns, one box spans 1 column -->
+    <div class="row">
+        <figure class="span3">
+            <div class="four"></div>
+
+            <figcaption>
+                <h2>Abstract 4</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="two"></div>
+
+            <figcaption>
+                <h2>Abstract 2</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row">
+        <figure class="span4">
+            <div class="three"></div>
+            <figcaption>
+                <h2>Abstract 3</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- Row 5: 3 boxes, 1-2-1 distribution -->
+    <div class="row">
+        <figure>
+            <div class="four"></div>
+            <figcaption>
+                <h2>Abstract 4</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure class="span2">
+            <div class="two"></div>
+            <figcaption>
+                <h2>Abstract 2</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="one"></div>
+            <figcaption>
+                <h2>Abstract 1</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+    </div>
+
+<script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+/* 
+*{
+    background-color: aqua;
+} */
+
+
+
+/* h1 {
+    color: gold;
+} */
+/* #xyz {
+    color: gold;
+}
+
+h1 {
+    color: red !important;
+} */
+ul>li:last-child,ul>li:first-child {
+  list-style-type: square;
+  font-size: xx-large;
+}
+div p{
+    font-size: 100px;
+}
