@@ -9,6 +9,7 @@
     --color8: #bb3e03;
     --color9: #ae2012;
     --color10: #9b2226;
+
 }
 
 html {
@@ -113,4 +114,66 @@ figcaption a {
 .color8 a:hover {
     border-color: var(--color8);
     color: var(--color8);
+}
+
+/* ====================section-popular===================== */
+
+.stripe {
+    background-color: var(--color2);
+    padding: 1rem 0 4rem 0;
+}
+
+#popular h2 {
+    color: white;
+}
+
+/* ==================header-style===================== */
+
+.header {
+    background-color: var(--color5);
+}
+
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+
+}
+
+nav li:first-child a {
+    background-color: transparent;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--color10);
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
 }
