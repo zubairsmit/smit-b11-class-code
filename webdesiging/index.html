@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -32,11 +34,20 @@
 
     <!-- ----------------------header-end---------------------- -->
 
+    <!-- ---------------------------banner----------------------- -->
+    <section id="hero">
+        <picture>
+            <source srcset="./assets/img/banner/hero-1200.png" media="(min-width: 839px)" />
+            <source srcset="./assets/img/banner/hero-838.png" media="(min-width: 301px)" />
+            <img src="./assets/img/banner/hero-300.png" alt="">
+        </picture>
+    </section>
+
     <div class="stripe">
         <section id="popular">
             <h2>Popular Prints</h2>
             <ul>
-                <li>
+                <li class="wow animate__animated  animate__fadeInLeft">
                     <figure class="color8">
                         <img src="./assets/img/popular/fork-it-up.jpg" alt="Pop Fork It Up">
                         <figcaption>
@@ -45,14 +56,14 @@
                     </figure>
                 </li>
                 <li>
-                    <figure class="color7">
+                    <figure class="color7 wow animate__animated animate__fadeInUp ">
                         <img src="./assets/img/popular/eyeing-you.jpg" alt="Eyeing You">
                         <figcaption>
                             <a href="#">Eyeing You</a>
                         </figcaption>
                     </figure>
                 </li>
-                <li class="tablet-card-3">
+                <li class="tablet-card-3 wow animate__animated  animate__fadeInRight">
                     <figure class="color4">
                         <img src="./assets/img/popular/lets-scoot.jpg" alt="lets-scoot">
                         <figcaption>
@@ -64,10 +75,11 @@
 
         </section>
     </div>
+
     <section id="collections">
         <h2>Collections</h2>
         <ul>
-            <li>
+            <li data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <figure class="color7">
                     <img src="./assets/img/collections/pop-art.jpg" alt="Pop Art: This must be the place">
                     <figcaption>
@@ -83,7 +95,7 @@
                     </figcaption>
                 </figure>
             </li>
-            <li>
+            <li data-aos="fade-left" data-aos-offset="500">
                 <figure class="color6">
                     <img src="./assets/img/collections/vivid.jpg" alt="Vivid: This must be the place">
                     <figcaption>
@@ -118,6 +130,38 @@
         </ul>
     </section>
 
+
+    <div class="footer">
+        <footer>
+            <div class="social">
+                <h4>Stay Connected!</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="./assets/img/facebook-icon.svg" alt="Visit us at Facebook." /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="./assets/img/instagram-icon.svg" alt="Visit us on Instagram." /></a>
+                    </li>
+                </ul>
+            </div>
+            <address>
+                Wall of Wonder <br />
+                RBC Plaza<br />
+                60 South 6th Street<br />
+                Minneapolis, MN 55402
+            </address>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new WOW().init();
+        AOS.init();
+    </script>
 </body>
 
 </html>
