@@ -53,7 +53,41 @@ let num3 = "12";
 // console.log(popularNumber4)
 // console.log(popularNumber5)
 
-// let num = 1;
-// console.log(num++)
-// console.log(num)
-// console.log(++num)
+// let number = 1;
+// console.log(number++ + number++)  //
+// console.log(number)    
+// console.log(--num)
+
+// let resultOfComputation = ((2 * 4) * 4) + 2;
+// console.log(resultOfComputation)
+
+
+
+// let name1 = prompt("Enter your Name: ")
+// let message = alert("Welcom! " + name1)
+// console.log(name1)
+
+// function printAlert() {
+//     alert("welcome to my site")
+// }
+
+// let gender = prompt("enter your gender");
+// console.log('gender' , gender)
+// if(gender == "male"){
+//  alert("You are allowed to enter in graveyard")
+// }
+// else if(gender == "female"){
+//     alert("you are not allowed to enter ")
+// }
+// else{
+//  alert("please enter a valid gender")
+// }
+function calulateResult(){
+let userNumber = document.getElementById('number').value
+let percentage = userNumber/750*100;
+if(percentage >= 80){
+    alert("You got A+ congrats")
+}
+console.log(userNumber)
+console.log(percentage)
+}
