@@ -55,7 +55,7 @@ let num3 = "12";
 
 // let number = 1;
 // console.log(number++ + number++)  //
-// console.log(number)    
+// console.log(number)
 // console.log(--num)
 
 // let resultOfComputation = ((2 * 4) * 4) + 2;
@@ -71,6 +71,9 @@ let num3 = "12";
 //     alert("welcome to my site")
 // }
 
+
+// ============if else==========================
+
 // let gender = prompt("enter your gender");
 // console.log('gender' , gender)
 // if(gender == "male"){
@@ -82,12 +85,62 @@ let num3 = "12";
 // else{
 //  alert("please enter a valid gender")
 // }
-function calulateResult(){
-let userNumber = document.getElementById('number').value
-let percentage = userNumber/750*100;
-if(percentage >= 80){
-    alert("You got A+ congrats")
+// function calulateResult() {
+//     let userNumber = document.getElementById('number').value
+//     let calculatedPercentage = userNumber / 750 * 100;  //106
+//     console.log(calculatedPercentage)
+//     if (calculatedPercentage >= 80 && calculatedPercentage <= 100) {
+//         alert("You got A+ congrats")
+//     }
+//     else if (calculatedPercentage >= 70 && calculatedPercentage < 80) {
+//         alert("You got A congrats")
+//     }
+//     else if (calculatedPercentage >= 60 && calculatedPercentage < 70) {
+//         alert("You got B congrats")
+//     }
+//     else if (calculatedPercentage >= 50 && calculatedPercentage < 60) {
+//         alert("You got C congrats")
+//     }
+//     else if (calculatedPercentage < 50) {
+//         alert("You are fail")
+//     }
+//     else {
+//         alert("please enter a valid input")
+//     }
+//     // console.log(userNumber)
+//     // console.log(percentage)
+// }
+
+
+// let age = 13;
+// let resident = 'pakistani';
+// let gender = 'female';
+
+// if (resident == "pakistani" || gender == "male") {
+
+//     alert("welcome to dubai!")
+//     if (age > 18) {
+//         alert(" you can drive cars in dubai")
+//     } else {
+//         alert(" you can't drive cars in dubai")
+//     }
+// }
+
+// ===================arrays =======================
+
+// let array = [];
+let std1 = ['zubair', 'junaid', 'owais'];
+function pushNewStudent() {
+    // let newStdName = prompt("Please Enter new student Name:")
+    // std1.push(newStdName)  //add from last
+    // std1.unshift(newStdName)  // add from first
+
+
 }
-console.log(userNumber)
-console.log(percentage)
+function removeNewStudent() {
+
+    // std1.shift()  // remove from first
+    std1.pop()  // remove from last
+    console.log(std1)
 }
+console.log(std1)
