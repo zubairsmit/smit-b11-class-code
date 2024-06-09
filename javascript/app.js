@@ -129,18 +129,81 @@ let num3 = "12";
 // ===================arrays =======================
 
 // let array = [];
-let std1 = ['zubair', 'junaid', 'owais'];
-function pushNewStudent() {
-    // let newStdName = prompt("Please Enter new student Name:")
-    // std1.push(newStdName)  //add from last
-    // std1.unshift(newStdName)  // add from first
+// let class1Std = ['zubair', 'junaid', 'owais'];
+// let class2Std = ['amir', 'sahir', 'mustaqeem'];
+// let std1 = [];
+
+// let stds = [
+//     ['zubair', 'junaid', 'owais'],
+//     ['amir', 'sahir', 'mustaqeem']
+// ]
+
+// function pushNewStudent() {
+// let newStdName = prompt("Please Enter new student Name:")
+// let newStdName = document.getElementById("number").value
+// std1.push(newStdName)  //add from last
+// console.log(std1)
+// std1.unshift(newStdName)  // add from first
+// }
+// console.log(std1)
+// function removeNewStudent() {
+
+//     std1.shift()  // remove from first
+//     // std1.pop()  // remove from last
+//     console.log(std1)
+// }
+// console.log(std1[2])
+// console.log(stds)
+
+// console.log(stds[0][1], stds[1][2])
 
 
+// ---------------slice----------------
+
+// const fruits = ["Banana", 14, "Orange", "Lemon", "Mango"];
+// let index_value_of_Samsung = fruits.indexOf(14);
+// console.log(index_value_of_Samsung)
+// const newFruits = fruits.slice(index_value_of_Samsung)
+// console.log(newFruits)
+
+
+// let friends = [
+//     ["zohaib", "azmat"],
+//     ["amir", "Ansari"],
+//     [
+//         ["naveed", "mustafa", "qasim", "sultan"]
+//     ]
+// ];
+
+// let myFriends = friends[2][0].slice(1, 3)
+// console.log(myFriends);
+
+// Create an Array
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, add "Lemon" and "Kiwi":
+// fruits.splice(2, 0, "Lemon", "Kiwi");
+// console.log(fruits)
+
+// const newArray = ["Banana", "Orange", "Apple", "Mango",
+//     [
+//         ["Milk", "yougart", "Butter"]
+//     ]
+// ];
+// let deletedItem = newArray[4][0].splice(1, 1, "Eggs", "Slice")
+
+// console.log(deletedItem)
+// console.log(newArray)
+
+
+// ---------------------for loops ------------------------
+
+for (let i = 0; i < 10; i++) {
+    console.log("zubair", i)
 }
-function removeNewStudent() {
 
-    // std1.shift()  // remove from first
-    std1.pop()  // remove from last
-    console.log(std1)
-}
-console.log(std1)
+
+
+
+
+
