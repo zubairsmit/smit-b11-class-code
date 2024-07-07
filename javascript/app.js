@@ -198,12 +198,31 @@ let num3 = "12";
 
 // ---------------------for loops ------------------------
 
-for (let i = 0; i < 10; i++) {
-    console.log("zubair", i)
+// for (let i = 0; i < 10; i++) {
+//     console.log("zubair", i)
+// }
+
+// let variable1 = "I AM ZUBAIR SHAIKH";
+// console.log(variable1.toLowerCase())
+// let variable1 = "I AM ZUBAIR SHAIKH";
+// console.log(variable1)
+let firstChar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illo laudantium a debitis.World War II Eum quidem beatae ratione, at, quos repellendus enim est quod laboriosam consequatur molestias velit debitis quam illum distinctio animi,World War II deserunt reprehenderit?"
+let foundVariable = firstChar.indexOf("World War II")
+console.log(foundVariable)
+if(foundVariable == -1){
+    alert("character not found")
+}else{
+
+    let newText = firstChar.replaceAll("World War II", "the Second World War");
+    console.log(newText)
 }
+// console.log(firstChar.indexOf("World War II"))
+// console.log(firstChar.lastIndexOf("World War II"))
+// console.log(firstChar.charAt(238))
 
 
-
-
+// function palindromChecker(){
+//     let str = 
+// }
 
 
