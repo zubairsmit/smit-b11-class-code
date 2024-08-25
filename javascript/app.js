@@ -198,11 +198,23 @@ let num3 = "12";
 
 // ---------------------for loops ------------------------
 
-for (let i = 0; i < 10; i++) {
-    console.log("zubair", i)
+// for (let i = 0; i < 10; i++) {
+//     console.log("zubair", i)
+// }
+
+// let element = document.getElementsByTagName("h1")
+// let elementwithId = document.getElementById("second")
+// console.log(element)
+// console.log(elementwithId)
+
+
+function changeColor() {
+    let elementwithId = document.getElementById("shape").classList.toggle("hide");
+    // elementwithId.setAttribute("style", "background-color:red;")
+    // elementwithId.setAttribute("class", "circle square")
+    console.log(elementwithId)
+
 }
-
-
 
 
 

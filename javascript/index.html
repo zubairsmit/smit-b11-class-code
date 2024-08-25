@@ -5,13 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .circle {
+            border-radius: 50%;
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>learning javascript</h1>
+    <h1 id="first">learning javascript</h1>
+    <h1 id="second">Topic is Dom</h1>
 
-    <!-- <button type="button" onclick="printAlert()">Try it</button> -->
-    <input type="text" id="number">
+    <button type="button" onclick="printAlert()">Try it</button>
+
+    <div id="shape" class="circle"></div>
+    <input type="text" id="number" class="abc">
+
+
+
+    <button type="button" onclick="changeColor()">changeColor</button>
     <button type="button" onclick="calulateResult()">Calculate</button>
     <button type="button" onclick="pushNewStudent()">Add New Std</button>
     <button type="button" onclick="removeNewStudent()">remove New Std</button>
@@ -19,3 +44,55 @@
 </body>
 
 </html>
+
+
+<!-- <html>
+
+<body>
+    <script>
+        function rainbowify() {
+            let divs = document.getElementsByTagName("div");
+            console.log(divs)
+            console.log(divs[2])
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].style.backgroundColor = divs[i].id;
+            }
+        }
+    </script>
+    <style>
+        div {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+        }
+    </style>
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Make me a rainbow</button>
+</body>
+
+</html> -->
+
+<!-- <html>
+
+<body>
+    <script>
+        window.onload = function () {
+            document.getElementById("square").addEventListener("click", changeColor);
+        }
+        function changeColor() {
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        }
+    </script>
+    <div id="square" style="width:100px;height:100px;background-color:grey;">Click for magic</div>
+</body>
+
+</html> -->
