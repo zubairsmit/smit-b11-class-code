@@ -202,6 +202,165 @@ let num3 = "12";
 //     console.log("zubair", i)
 // }
 
+// let variable1 = "I AM ZUBAIR SHAIKH";
+// console.log(variable1.toLowerCase())
+// let variable1 = "I AM ZUBAIR SHAIKH";
+// console.log(variable1)
+let firstChar = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illo laudantium a debitis.World War II Eum quidem beatae ratione, at, quos repellendus enim est quod laboriosam consequatur molestias velit debitis quam illum distinctio animi,World War II deserunt reprehenderit?"
+let foundVariable = firstChar.indexOf("World War II")
+console.log(foundVariable)
+if (foundVariable == -1) {
+    alert("character not found")
+} else {
+
+    let newText = firstChar.replaceAll("World War II", "the Second World War");
+    console.log(newText)
+}
+// console.log(firstChar.indexOf("World War II"))
+// console.log(firstChar.lastIndexOf("World War II"))
+// console.log(firstChar.charAt(238))
+
+
+// function palindromChecker(){
+//     let str = 
+// }
+
+// let a = 13;
+// let b = 13;
+// console.log(Number(a) + Number(b))
+// console.log(String(a) + String(b))
+
+// let c = 3.3334235;
+// console.log(c.toFixed(3))
+
+// let rightNow = new Date();
+// console.log(new Date());
+// var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+// console.log(dayNames[rightNow.getDay()])
+// console.log(rightNow.getDate())
+// console.log(rightNow.getFullYear())
+// console.log(rightNow.getMinutes())
+// console.log(rightNow.getTime())
+// console.log(rightNow.getHours())
+
+
+// ========function=====
+// let a = +prompt("enter number 1")
+// let b = +prompt("enter number 2")
+// let c = +prompt("enter number 3")
+
+// function calculateResult(num1,num2,num3) {
+//    var result = num1 + num2 + num3;
+//    let zubair = 'zubair';
+//    if(result === 100){
+//     var newNumber2 = 1000;
+//     console.log(zubair)
+//    }
+//    console.log(newNumber2)
+//    console.log(newNumber)
+//    console.log(zubair)
+
+
+
+//    return 100;
+// }
+
+// console.log(zubair)
+// let num4 = 100;
+// let finalResult = num4 - calculateResult(a,b,c)
+
+// console.log(finalResult)
+
+// let dayOfWeek = "Mon";
+
+// switch(dayOfWeek){
+//  case "Sun":
+//     alert("Whoopee");
+//     console.log('a')
+//     console.log('cv')
+//     console.log('asd')
+//     break;
+//  case "Mon":
+//     alert("it's weekday")
+//     break;
+//  case "Sat":
+//     alert("it's weekend")  
+//      break;
+//  default :
+//   alert("No Match")
+// }
+
+// let number = 4;
+// switch(true){
+//     case (number >= 5 && number < 10):
+//         alert("it's between 5 to 10")
+//     default :
+//      alert("no match")
+// }
+
+
+for (let i = 0; i < 10; i++) {
+    console.log('zubair', i)
+}
+
+// let i = 0;
+// while(i < 0){
+//     console.log('zubair' , i)
+//     i++;
+// }
+
+// let j = 0;
+// do{
+//     console.log('zubair' , j) 
+//     j++;
+// }while(j < 0)
+
+
+
+// ==========Objects in javascript =========
+
+
+let plan1 = {
+    name: "Basic Plan",
+    price: 3.99
+}
+plan1.space = 100;
+// console.log(plan1)
+// console.log(plan1.price)
+// console.log(plan1["name"])
+
+
+// let std1 = {
+//     name:'zubair',
+//     seatno:"eb201212",
+//     department:"ubit",
+//     isFeeSubmit: true,
+//    subjects:["pak" , "urdu" , "eng" , "math"]
+// }
+//  std1.subjects.push("computer science")
+//  console.log(std1)
+// let stdSubjects = std1.subjects.length;
+// for(let i=0; i < stdSubjects; i++){
+//      console.log(std1.subjects[i] , i)
+// }
+
+let studentsInfo = [
+    {
+        name: 'zubair',
+        seatno: "eb201212",
+        department: "ubit",
+        isFeeSubmit: true,
+        subjects: ["pak", "urdu", "eng", "math"]
+    },
+    {
+        name: 'usman',
+        seatno: "eb201212",
+        department: "ubit",
+        isFeeSubmit: false,
+        subjects: ["pak", "urdu", "eng", "math"]
+    }
+]
+
 // let element = document.getElementsByTagName("h1")
 // let elementwithId = document.getElementById("second")
 // console.log(element)
@@ -215,7 +374,4 @@ function changeColor() {
     console.log(elementwithId)
 
 }
-
-
-
 
