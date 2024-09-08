@@ -134,23 +134,71 @@ let myFavouriteProgLang = ["javascript", "python", "C++", "Java", "Typescript"]
 // }
 
 // sum(5, 5, 10, 10, 20, 40)
+//     (resolve, reject) => {
 
-const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let rollno = undefined;
+//         if (rollno === undefined) {
+//             reject("error with communicating with database")
+//         }
 
-    setTimeout(() => {
-        let rollno = undefined;
-        if (rollno === undefined) {
-            reject("error with communicating with database")
-        }
+//     }, 2000)
 
-    }, 2000)
+// }
 
-})
 
-console.log(promise1)
 
-promise1.then((item) => {
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let peseWapis = prompt("apke pese milgaen:");
+//         if (peseWapis === "yes") {
+//             resolve("pese successfully recieved")
+//         } else {
+//             reject("pese nhi diye poice complain karna he")
+//         }
+//     }, 1000)
+// })
 
-}).catch((message) => {
-    console.log(message)
+// console.log(promise1)
+
+// promise1.then((message) => {
+//     alert(message)
+//     console.log(message)
+// }).catch((error) => {
+//     alert(error)
+//     console.log(error)
+// })
+
+
+
+// promise1.then((item) => {
+
+// }).catch((message) => {
+//     console.log(message)
+// })
+
+
+// =================Async and Await ============
+
+// console.log("hello 1")
+
+// for (let i = 0; i < 1000000; i++) {
+//     console.log("A")
+// }
+
+// console.log("hello 2")
+
+async function fetchGithubUsers() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users")
+    const users = await response.json()
+    if (users) {
+        return users
+    }
+
+}
+let usersData = fetchGithubUsers()
+usersData.then((data) => {
+    alert(data[0].name)
+}).catch((error) => {
+    console.log(error)
 })
