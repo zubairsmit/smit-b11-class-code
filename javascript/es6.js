@@ -191,6 +191,8 @@ let myFavouriteProgLang = ["javascript", "python", "C++", "Java", "Typescript"]
 async function fetchGithubUsers() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users")
     const users = await response.json()
+    console.log(response)
+    console.log(users)
     if (users) {
         return users
     }
@@ -198,7 +200,45 @@ async function fetchGithubUsers() {
 }
 let usersData = fetchGithubUsers()
 usersData.then((data) => {
-    alert(data[0].name)
+    // alert(data[0].name)
 }).catch((error) => {
     console.log(error)
 })
+
+let jsonData = '{"name":"John", "age":30, "city":"New York"}';
+let objData = JSON.parse(jsonData)
+
+
+
+// let jsonData = [
+//     {
+//         "name": "Adeel Solangi",
+//         "language": "Sindhi",
+//         "id": "V59OF92YF627HFY0",
+//         "bio": "Donec lobortis eleifend condimentum. Cras dictum dolor lacinia lectus vehicula rutrum. Maecenas quis nisi nunc. Nam tristique feugiat est vitae mollis. Maecenas quis nisi nunc.",
+//         "version": 6.1
+//     },
+//     {
+//         "name": "Afzal Ghaffar",
+//         "language": "Sindhi",
+//         "id": "ENTOCR13RSCLZ6KU",
+//         "bio": "Aliquam sollicitudin ante ligula, eget malesuada nibh efficitur et. Pellentesque massa sem, scelerisque sit amet odio id, cursus tempor urna. Etiam congue dignissim volutpat. Vestibulum pharetra libero et velit gravida euismod.",
+//         "version": 1.88
+//     }
+// ]
+
+console.log(jsonData[0].name)
+
+let myInfo = {
+    name: "zubair",
+    age: 12,
+    city: "karachi"
+}
+console.log(objData)
+let jsonDatatoSend = JSON.stringify(myInfo);
+console.log(jsonDatatoSend)
+
+
+// console.log(jsonData)
+
+// console.log(objData.name, objData.age, objData.city)
