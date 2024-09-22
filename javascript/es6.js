@@ -188,25 +188,25 @@ let myFavouriteProgLang = ["javascript", "python", "C++", "Java", "Typescript"]
 
 // console.log("hello 2")
 
-async function fetchGithubUsers() {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users")
-    const users = await response.json()
-    console.log(response)
-    console.log(users)
-    if (users) {
-        return users
-    }
+// async function fetchGithubUsers() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users")
+//     const users = await response.json()
+//     console.log(response)
+//     console.log(users)
+//     if (users) {
+//         return users
+//     }
 
-}
-let usersData = fetchGithubUsers()
-usersData.then((data) => {
-    // alert(data[0].name)
-}).catch((error) => {
-    console.log(error)
-})
+// }
+// let usersData = fetchGithubUsers()
+// usersData.then((data) => {
+//     // alert(data[0].name)
+// }).catch((error) => {
+//     console.log(error)
+// })
 
-let jsonData = '{"name":"John", "age":30, "city":"New York"}';
-let objData = JSON.parse(jsonData)
+// let jsonData = '{"name":"John", "age":30, "city":"New York"}';
+// let objData = JSON.parse(jsonData)
 
 
 
@@ -227,18 +227,109 @@ let objData = JSON.parse(jsonData)
 //     }
 // ]
 
-console.log(jsonData[0].name)
+// console.log(jsonData[0].name)
 
-let myInfo = {
-    name: "zubair",
-    age: 12,
-    city: "karachi"
-}
-console.log(objData)
-let jsonDatatoSend = JSON.stringify(myInfo);
-console.log(jsonDatatoSend)
+// let myInfo = {
+//     name: "zubair",
+//     age: 12,
+//     city: "karachi"
+// }
+// console.log(objData)
+// let jsonDatatoSend = JSON.stringify(myInfo);
+// console.log(jsonDatatoSend)
 
 
 // console.log(jsonData)
 
 // console.log(objData.name, objData.age, objData.city)
+// var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+
+// let myText = "I am Zubair Shaikh my age is 22 and my current semester is 7";
+// let pattern = /zubair|7/ig;
+// let find = myText.match(pattern);
+// console.log(find)
+
+const numbers = [4, 9, 16, 25];
+
+
+// let result = numbers.map((data, index) => {
+//     // console.log(data + 1)
+//     if (index === 2) {
+//         data = data + 1
+//     }
+//     console.log(data, index)
+//     return data
+// })
+// console.log(result)
+
+
+// let result2 = numbers.forEach((element, index) => {
+//     if (index === 2) {
+//         element = element + 1;
+//     }
+//     console.log(element)
+// });
+// console.log(result2)
+// console.log(numbers)
+
+// let ages = [17, 23, 15, 26];
+
+// let result3 = ages.filter((age) => {
+
+//     if (age >= 18) {
+//         return age;
+//     }
+//     console.log(age)
+// })
+// console.log(result3)
+
+
+// let result4 = ages.find((age) => {
+
+//     if (age >= 18) {
+//         return age;
+//     }
+// })
+// console.log(result4)
+
+// debugger;
+
+
+// let val = 5;
+// val += adder()
+// val += adder()
+// val += adder()
+// console.log(val)
+// function adder() {
+//     let counter = val;
+//     for (let i = 0; i < val; i++) {
+//         counter++
+//     }
+//     if (counter == 10) {
+//         return undefined
+//     }
+//     return counter;
+// }
+// debugger;
+
+const output = document.getElementById('output');
+const emaiVal = document.getElementById('email');
+const btn = document.getElementById('check-btn');
+const emailCheckPattern = /([A-Za-z0-9._-]+@[A-Za-z0-9]+\.[A-Za-z0-9]+)\w+/;
+var passwordValidation = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+btn.addEventListener("click", (e) => {
+    const value = emaiVal.value;
+    const result = emailCheckPattern.test(value)
+    let response = '';
+    if (!result) {
+        response = "Invalid Email";
+        output.style.color = "red"
+    } else {
+        response = "Valid Email";
+        output.style.color = "green"
+    }
+    output.textContent = response;
+    console.log(result)
+})
