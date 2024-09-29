@@ -313,23 +313,61 @@ const numbers = [4, 9, 16, 25];
 // }
 // debugger;
 
-const output = document.getElementById('output');
-const emaiVal = document.getElementById('email');
-const btn = document.getElementById('check-btn');
-const emailCheckPattern = /([A-Za-z0-9._-]+@[A-Za-z0-9]+\.[A-Za-z0-9]+)\w+/;
-var passwordValidation = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+// const output = document.getElementById('output');
+// const emaiVal = document.getElementById('email');
+// const btn = document.getElementById('check-btn');
+// const emailCheckPattern = /([A-Za-z0-9._-]+@[A-Za-z0-9]+\.[A-Za-z0-9]+)\w+/;
+// var passwordValidation = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
-btn.addEventListener("click", (e) => {
-    const value = emaiVal.value;
-    const result = emailCheckPattern.test(value)
-    let response = '';
-    if (!result) {
-        response = "Invalid Email";
-        output.style.color = "red"
-    } else {
-        response = "Valid Email";
-        output.style.color = "green"
+// btn.addEventListener("click", (e) => {
+//     const value = emaiVal.value;
+//     const result = emailCheckPattern.test(value)
+//     let response = '';
+//     if (!result) {
+//         response = "Invalid Email";
+//         output.style.color = "red"
+//     } else {
+//         response = "Valid Email";
+//         output.style.color = "green"
+//     }
+//     output.textContent = response;
+//     console.log(result)
+// })
+
+
+
+async function fetchGithubUsers() {
+    const response = await fetch('https://dummyjson.com/auth/login', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username: 'emilys',
+            password: 'emilyspass',
+            expiresInMins: 30
+        }),
+    })
+    const users = await response.json()
+    console.log(response)
+    console.log(users)
+    if (users) {
+        return users
     }
-    output.textContent = response;
-    console.log(result)
+
+}
+let usersData = fetchGithubUsers()
+usersData.then((data) => {
+    console.log('data', data)
+    if (data) {
+        localStorage.setItem('token', data.accessToken)
+        let token = localStorage.getItem('token')
+        if (token) {
+            location.href = './dashboard.html'
+        }
+        console.log(token)
+    }
+    // alert(data[0].name)
+}).catch((error) => {
+    console.log(error)
 })
