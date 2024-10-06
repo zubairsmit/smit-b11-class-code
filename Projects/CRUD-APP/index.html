@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APPLICATION</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CRUD Application using MockAPI</h1>
+        <div class="row">
+            <div class="col-6">
+                <h2>Posts</h2>
+                <div class="posts" id="posts">
+
+
+                    <!-- <div class="post">
+                        <div class="post-header">
+                            <img src="https://www.zubairshaikh.me/images/img/profile.jpg" alt="Avatar">
+                            <div>
+                                <h3>John Doe (Developer)</h3>
+                                <small>9/29/2024, 10:30 AM</small>
+                            </div>
+                        </div>
+                        <p>This is the post body content.</p>
+                        <div class="actions">
+                            <button class="edit-btn" onclick="editPost(1)">Edit</button>
+                            <button class="delete-btn" onclick="deletePost(1)">Delete</button>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="create-post">
+                    <h2>Create Posts</h2>
+                    <form id="createPostForm">
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                        <input type="text" name="title" id="title" placeholder="Your Title" required>
+                        <input type="text" name="avatar" id="avatar" placeholder="Your Profile URL" required>
+                        <textarea name="body" id="body" placeholder="Enter you Description"></textarea>
+                        <button type="submit" class="btn"> Create Post</button>
+                    </form>
+                </div>
+                <!-- ---------------update-form------------ -->
+                <div id="update-post" style="display: none;">
+                    <h2>Update Post</h2>
+                    <form id="updatePostForm">
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                        <input type="text" name="title" id="title" placeholder="Your Title" required>
+                        <input type="text" name="avatar" id="avatar" placeholder="Your Profile URL" required>
+                        <textarea name="body" id="body" placeholder="Enter you Description"></textarea>
+                        <button type="submit" class="btn"> Update Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
