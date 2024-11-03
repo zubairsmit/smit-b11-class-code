@@ -6,13 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "zubair",
   "license": "ISC",
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
