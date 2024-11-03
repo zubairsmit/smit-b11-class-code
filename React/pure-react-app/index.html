@@ -19,11 +19,12 @@
 
     <script>
 
-        const Pet = () => {
+        const Pet = (props) => {
+            console.log("props", props)
             return React.createElement("div", {}, [
-                React.createElement("h1", {}, "Luna"),
-                React.createElement("h2", {}, "Dog"),
-                React.createElement("h2", {}, "Havanese"),
+                React.createElement("h1", {}, props.name),
+                React.createElement("h2", {}, props.animal),
+                React.createElement("h3", {}, props.breed),
             ]);
         };
 
@@ -33,8 +34,17 @@
                 {},
                 [
                     React.createElement("h2", {}, "We are learning React"),
-                    React.createElement(Pet),
-                    React.createElement(Pet),
+                    React.createElement(Pet, {
+                        name: "Luna",
+                        animal: "Cat",
+                        breed: "havanese"
+                    }),
+                    React.createElement(Pet, {
+                        name: "Scoby Duby ",
+                        animal: "Dog",
+                        breed: "German Shepherd"
+                    }),
+
 
                 ]
             )
