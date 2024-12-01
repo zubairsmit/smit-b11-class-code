@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const ANIMALS = ["Select an Option", "bird", "cat", "dog", "rabbit", "reptile"];
 // const breeds = ["", "Buldoog", "husky"];
 const breedsData = [
@@ -32,7 +32,19 @@ function SearchParams() {
   const [animal, setAnimal] = useState("");
   const [selectedBreeds, setSelectedBreeds] = useState([]);
   const [breed, setBreed] = useState("");
+  const [pets, setPets] = useState([]);
   //   let location = "Seattle, WA";
+
+  useEffect(() => {
+    fetchPets();
+  }, []);
+
+  async function fetchPets() {
+    const response = await fetch("http://pets-v2.dev-apis.com/pets");
+    const data = await response.json();
+    setPets(data.pets);
+    console.log(data);
+  }
 
   const handleChange = (e) => {
     console.log("e", e);
@@ -49,11 +61,14 @@ function SearchParams() {
     } else if (value === "cat") {
       let filterData = breedsData.filter((item) => item.animal === 2);
       setSelectedBreeds(filterData);
+    } else {
+      setSelectedBreeds([]);
     }
   };
   console.log("location", location);
   console.log("animal", animal);
   console.log("breed", breed);
+  console.log("pets", pets);
   return (
     <div className="search-params">
       <form>
@@ -89,7 +104,7 @@ function SearchParams() {
           <label htmlFor="breed">
             Breed
             <select
-              // disabled={!breeds.length}
+              disabled={!selectedBreeds.length}
               id="breed"
               value={breed}
               onChange={(e) => setBreed(e.target.value)}
@@ -106,6 +121,12 @@ function SearchParams() {
         </label>
         <button>Submit</button>
       </form>
+      <div className="search">
+        <div className="info">
+          <h1>{"Luna"}</h1>
+          <h2>{`${"dog"} — ${"animal"} — ${"US"}`}</h2>
+        </div>
+      </div>
     </div>
   );
 }
